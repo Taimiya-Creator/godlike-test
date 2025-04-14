@@ -1,17 +1,7 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
-
-// Parallax effect on scrolling
-window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY;
-    document.querySelector('.parallax').style.backgroundPosition = 'center ' + (scrollPosition * 0.5) + 'px';
-});
+// Scroll progress bar
+window.onscroll = function () {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / scrollHeight) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+};

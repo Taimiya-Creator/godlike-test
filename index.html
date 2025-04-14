@@ -1,82 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Godlike Experience</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GODLIKE | Digital Solutions</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>GODLIKE</h1>
+<body class="bg-gray-950 text-white scroll-smooth font-sans">
+
+  <!-- Progress Bar -->
+  <div id="progressBar" class="fixed top-0 left-0 h-1 bg-orange-500 z-50"></div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto flex items-center p-4">
+      <img src="logo.png" alt="GODLIKE logo" class="w-10 h-10 mr-3"/>
+      <div class="text-3xl font-bold text-orange-500 tracking-wider glow">GODLIKE</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden pt-20">
+    <div class="text-center px-6 z-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 glow">Unleash the GODLIKE Power</h1>
+      <p class="text-xl text-gray-200 bg-black/40 px-4 py-2 rounded-lg inline-block">Delivering elite design, code, and creativity to rule the web.</p>
+    </div>
+    <div class="absolute inset-0 z-0 opacity-50">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_jtbfg2nb.json" background="transparent" speed="0.5" loop autoplay class="w-full h-full"></lottie-player>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-gray-900 text-center px-6" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-orange-400 mb-6 glow">About Us</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-300">
+      GODLIKE is a digital force. We forge elite websites with powerful design, full-stack development, and targeted growth strategies.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 bg-black" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-orange-500 glow">Our Services</h2>
+      <p class="text-gray-400">Tailored solutions for your digital kingdom</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-orange-500/30 transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-orange-400 mb-4">Web Design</h3>
+        <p class="text-gray-300">Creative, responsive, and eye-catching designs that convert and captivate.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-orange-500/30 transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-orange-400 mb-4">Web Development</h3>
+        <p class="text-gray-300">Robust, scalable, and high-performance applications with modern stacks.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-orange-500/30 transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-orange-400 mb-4">SEO & Marketing</h3>
+        <p class="text-gray-300">Strategic SEO and marketing that boosts your brand and drives traffic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section id="portfolio" class="py-24 bg-gray-900 px-6" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-orange-400 glow">Portfolio</h2>
+      <p class="text-gray-400">Some of our latest elite projects</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <img src="https://via.placeholder.com/400x300" class="rounded-lg shadow-lg hover:scale-105 transition"/>
+      <img src="https://via.placeholder.com/400x300" class="rounded-lg shadow-lg hover:scale-105 transition"/>
+      <img src="https://via.placeholder.com/400x300" class="rounded-lg shadow-lg hover:scale-105 transition"/>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel -->
+  <section id="testimonials" class="py-24 bg-black px-6" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-orange-500 glow">What Clients Say</h2>
+    </div>
+    <div class="max-w-3xl mx-auto swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-gray-800 p-6 rounded-xl text-center">
+          <p class="text-lg text-gray-300 mb-4">"Godlike elevated our entire brand. Outstanding quality!"</p>
+          <h4 class="text-orange-400 font-semibold">— Alex Morgan</h4>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Parallax Section -->
-    <section id="home" class="parallax">
-        <div class="content">
-            <h2>Welcome to the GODLIKE Experience</h2>
-            <p>Enter the realm of excellence, where innovation meets perfection.</p>
+        <div class="swiper-slide bg-gray-800 p-6 rounded-xl text-center">
+          <p class="text-lg text-gray-300 mb-4">"Professional, fast, and visually stunning work."</p>
+          <h4 class="text-orange-400 font-semibold">— Jenna Fox</h4>
         </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>We are pioneers in creating web experiences that leave an everlasting impact.</p>
+        <div class="swiper-slide bg-gray-800 p-6 rounded-xl text-center">
+          <p class="text-lg text-gray-300 mb-4">"A web partner that actually understands our vision."</p>
+          <h4 class="text-orange-400 font-semibold">— Mark Rivera</h4>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section with Animation -->
-    <section id="services" class="fade-in">
-        <div class="content">
-            <h2>Our Services</h2>
-            <div class="service-container">
-                <div class="service-item">
-                    <h3>Web Design</h3>
-                    <p>Creating visually stunning, functional websites.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Web Development</h3>
-                    <p>Building fast, reliable, and secure websites.</p>
-                </div>
-                <div class="service-item">
-                    <h3>SEO Optimization</h3>
-                    <p>Helping your website rank higher and perform better.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-gray-900 px-6" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-cyan-300 mb-6 glow-cyan">Get In Touch</h2>
+      <form action="https://formspree.io/f/xrbpdglj" method="POST" class="space-y-6">
+        <input type="text" name="name" required placeholder="Your Name"
+          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <input type="email" name="email" required placeholder="Your Email"
+          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500">
+        <textarea name="message" required placeholder="Your Message" rows="5"
+          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+        <button type="submit"
+          class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
 
-    <!-- Contact Section with Form -->
-    <section id="contact">
-        <div class="content">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-black py-8 text-center border-t border-gray-800">
+    <p class="text-gray-500">&copy; 2025 GODLIKE Inc. All Rights Reserved.</p>
+    <p class="text-gray-500 mt-1">Made By Taimiya</p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="text-gray-400 hover:text-orange-400 transition">Facebook</a>
+      <a href="#" class="text-gray-400 hover:text-orange-400 transition">Instagram</a>
+      <a href="#" class="text-gray-400 hover:text-orange-400 transition">LinkedIn</a>
+    </div>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025 GODLIKE Inc. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init();
+    new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+  </script>
 </body>
 </html>
